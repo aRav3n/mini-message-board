@@ -2,17 +2,61 @@ body {
   margin: 0;
 }
 
+button {
+  background-color: #00000022;
+  border: 1px solid #000000;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  justify-self: center;
+  padding: 0.75vmin 1vmin;
+}
+
+button:hover {
+  background-color: #fbff0087;
+}
+
+fieldset {
+  border-radius: 0.5rem;
+  display: grid;
+  gap: 2vh;
+  width: max-content;
+}
+
+fieldset > *:first-child {
+  max-width: 225px;
+}
+
+form {
+  margin: 5vh 2vw;
+}
+
 h1 {
   font-size: 1.5rem;
   font-weight: 100;
-  padding: 2vh 2vw;
+  margin: 2vh 2vw;
+  padding: 0;
+}
+
+input,
+textarea {
+  border: 1px solid #000000;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  resize: none;
+}
+
+label {
+  display: grid;
 }
 
 .message {
   border: 1px solid #00000044;
+  border-radius: 0.5rem;
   display: grid;
   gap: 0.25vh;
-  padding: 0.5vh 0.5vw;
+  justify-self: stretch;
+  padding: 1vh 1vw;
 }
 
 .message > div:nth-child(2) {
@@ -27,6 +71,10 @@ h1 {
 .messageList {
   display: grid;
   gap: 1vh;
+  justify-items: center;
+  max-width: 90vw;
+  margin: 5vh 5vw;
+  padding: 0;
   width: max-content;
 }
 
@@ -39,10 +87,20 @@ nav ul {
   gap: 2vw;
   list-style-type: none;
   margin: 0;
-  padding: 2vh 2vw;
+  padding: 1vh 1vw;
   width: 100vw;
 }
 
 nav ul a {
+  color: #000000;
   text-decoration: none;
+}
+
+nav ul a:visited {
+  color: #000000;
+}
+
+textarea {
+  height: 10vh;
+  width: max(250px, 50vw);
 }

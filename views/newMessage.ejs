@@ -3,6 +3,18 @@
 <%- include("head") %>
 <body>
   <%- include("navbar", { links: links }) %>
-  <h1>New message page</h1>
+  <form action="" method="POST">
+    <fieldset>
+      <label for="user">
+        Name:
+        <input type="text" name="user" id="user">
+      </label>
+      <label for="text">
+        Your message:
+        <textarea name="text" id="text"></textarea>
+      </label>
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
 </body>
 </html>

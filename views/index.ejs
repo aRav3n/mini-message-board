@@ -3,8 +3,8 @@
 <%- include("head") %>
 <body>
   <%- include("navbar", { links: links }) %>
-  <h1>Current messages:</h1>
   <ul class="messageList">
+    <h1>Current messages:</h1>
     <% messages.map((message) => { %>
       <div class="message">
         <div>"<%= message.text %>"</div>

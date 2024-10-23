@@ -1,11 +1,11 @@
 <nav>
   <ul>
     <% for (let i = 0; i < links.length; i++) { %>
-      <li>
-        <a href="<%= links[i].href %>">
+      <a href="<%= links[i].href %>">
+        <button type="button">
           <span> <%= links[i].text %> </span>
-        </a>
-      </li>
+        </button>
+    </a>
     <% } %>
   </ul>
 </nav>
