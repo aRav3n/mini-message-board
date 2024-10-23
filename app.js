@@ -7,7 +7,9 @@ const path = require("node:path");
 const PORT = process.env.PORT || 3000;
 
 const indexRouter = require("./routes/indexRouter")(links, messages);
-const newMessageRouter = require("./routes/newMessageRouter")(links);
+const newMessageRouter = require("./routes/newMessageRouter")(links, messages);
+
+app.use(express.urlencoded({ extended: true }));
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
