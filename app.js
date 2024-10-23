@@ -1,14 +1,12 @@
 const express = require("express");
 const app = express();
+const links = require("./models/links");
+const messages = require("./models/messages");
 const path = require("node:path");
 
 const PORT = process.env.PORT || 3000;
-const links = [
-  { href: "/", text: "Home" },
-  { href: "/new", text: "New Message" },
-];
 
-const indexRouter = require("./routes/indexRouter")(links);
+const indexRouter = require("./routes/indexRouter")(links, messages);
 const newMessageRouter = require("./routes/newMessageRouter")(links);
 
 app.set("views", path.join(__dirname, "views"));

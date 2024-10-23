@@ -9,6 +9,15 @@
 </head>
 <body>
   <%- include("navbar", { links: links }) %>
-  <h1>Index page</h1>
+  <h1>Current messages:</h1>
+  <ul class="messageList">
+    <% messages.map((message) => { %>
+      <div class="message">
+        <div>"<%= message.text %>"</div>
+        <div><%= message.user %></div>
+        <div><%= message.added %></div>
+      </div>
+    <% }) %>
+  </ul>
 </body>
 </html>

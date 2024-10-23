@@ -2,12 +2,38 @@ body {
   margin: 0;
 }
 
+h1 {
+  padding: 2vh 2vw;
+}
+
+.message {
+  border: 1px solid #00000044;
+  display: grid;
+  gap: 0.25vh;
+  padding: 0.5vh 0.5vw;
+}
+
+.message > div:nth-child(2) {
+  font-weight: bold;
+  justify-self: center;
+}
+
+.message > div:last-child {
+  justify-self: end;
+}
+
+.messageList {
+  display: grid;
+  gap: 1vh;
+  width: max-content;
+}
+
 nav ul {
   align-content: center;
   align-items: center;
   background-color: #00000022;
   display: flex;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   gap: 2vw;
   list-style-type: none;
   margin: 0;
