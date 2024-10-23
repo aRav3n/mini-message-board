@@ -1,3 +1,4 @@
+// Adapted from https://github.com/Orion-Barjamaj/MiniMessageBoard/blob/main/app.js
 function newDate() {
   const date = new Date();
 
