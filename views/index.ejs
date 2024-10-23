@@ -6,11 +6,11 @@
   <ul class="messageList">
     <h1>Current messages:</h1>
     <% messages.map((message) => { %>
-      <div class="message">
+      <button class="message" type="button">
         <div>"<%= message.text %>"</div>
         <div><%= message.user %></div>
         <div><%= message.added %></div>
-      </div>
+      </button>
     <% }) %>
   </ul>
 </body>

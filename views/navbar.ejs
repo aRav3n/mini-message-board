@@ -2,7 +2,7 @@
   <ul>
     <% for (let i = 0; i < links.length; i++) { %>
       <a href="<%= links[i].href %>">
-        <button type="button">
+        <button type="button" tabindex="-1">
           <span> <%= links[i].text %> </span>
         </button>
     </a>

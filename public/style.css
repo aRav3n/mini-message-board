@@ -51,12 +51,18 @@ label {
 }
 
 .message {
+  background-color: #ffffff00;
   border: 1px solid #00000044;
   border-radius: 0.5rem;
   display: grid;
   gap: 0.25vh;
   justify-self: stretch;
   padding: 1vh 1vw;
+}
+
+.message > div {
+  font-family: Garamond, serif;
+  font-weight: 300;
 }
 
 .message > div:nth-child(2) {
@@ -92,6 +98,7 @@ nav ul {
 }
 
 nav ul a {
+  border-radius: 0.25rem;
   color: #000000;
   text-decoration: none;
 }
