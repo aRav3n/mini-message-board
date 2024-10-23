@@ -1,6 +1,10 @@
 const { Router } = require("express");
 const indexRouter = Router();
 
-indexRouter.get("/", (req, res) => res.render("index"));
+function returnValue(links) {
+  return indexRouter.get("/", (req, res) =>
+    res.render("index", { links: links })
+  );
+}
 
-module.exports = indexRouter;
+module.exports = returnValue;

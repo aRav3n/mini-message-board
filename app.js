@@ -1,9 +1,15 @@
 const express = require("express");
 const app = express();
 const path = require("node:path");
+
 const PORT = process.env.PORT || 3000;
-const indexRouter = require("./routes/indexRouter");
-const newMessageRouter = require("./routes/newMessageRouter");
+const links = [
+  { href: "/", text: "Home" },
+  { href: "/new", text: "New Message" },
+];
+
+const indexRouter = require("./routes/indexRouter")(links);
+const newMessageRouter = require("./routes/newMessageRouter")(links);
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");

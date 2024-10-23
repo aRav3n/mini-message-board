@@ -1,6 +1,10 @@
 const { Router } = require("express");
 const newMessageRouter = Router();
 
-newMessageRouter.get("/", (req, res) => res.render("newMessage"));
+function returnValue(links) {
+  return newMessageRouter.get("/", (req, res) =>
+    res.render("newMessage", { links: links })
+  );
+}
 
-module.exports = newMessageRouter;
+module.exports = returnValue;

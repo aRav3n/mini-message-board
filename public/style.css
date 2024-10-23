@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+}
+
+nav ul {
+  align-content: center;
+  align-items: center;
+  background-color: #00000022;
+  display: flex;
+  font-size: 1.5rem;
+  gap: 2vw;
+  list-style-type: none;
+  margin: 0;
+  padding: 2vh 2vw;
+  width: 100vw;
+}
+
+nav ul a {
+  text-decoration: none;
+}
