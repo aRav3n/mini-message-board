@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 const indexRouter = require("./routes/indexRouter")(links, messages);
 const newMessageRouter = require("./routes/newMessageRouter")(links, messages);
+const messageDetailsRouter = require("./routes/messageRouter")(links, messages);
 
 app.use(express.urlencoded({ extended: true }));
 
@@ -19,5 +20,10 @@ app.use(express.static(assetsPath));
 
 app.use("/", indexRouter);
 app.use("/new", newMessageRouter);
+app.use("/message", messageDetailsRouter);
+
+app.get("*", (req, res) =>
+  res.status(404).render("errorPage", { links: links })
+);
 
 app.listen(PORT);

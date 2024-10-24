@@ -1,5 +1,4 @@
 const { Router } = require("express");
-const messages = require("../models/messages");
 const newMessageRouter = Router();
 const getNewDate = require("../getNewDate");
 
@@ -13,6 +12,7 @@ function returnValue(links, messages) {
       user: req.body.user,
       text: req.body.text,
       added: getNewDate(),
+      id: messages.length,
     };
     messages.push(newMessageObject);
     res.redirect("/");

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<%- include("head") %>
+<body>
+  <%- include("navbar", { links: links }) %>
+  <div class="messageDetail">
+    <h1>Message from <%= message.user %>:</h1>
+    <div><%= message.text %></div>
+    <div>Sent on: <%= message.added %></div>
+  </div>
+</body>
+</html>
