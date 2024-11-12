@@ -2,9 +2,14 @@ const db = require("../db/queries");
 const links = require("../models/links");
 
 async function getMessageArray() {
-  const returnArray = [];
   const messages = await db.getMessages();
   return messages;
+}
+
+function errorGet(req, res) {
+  res.render("errorPage", {
+    links: links,
+  });
 }
 
 async function indexGet(req, res) {
@@ -28,6 +33,7 @@ async function newPost(req, res) {
 }
 
 module.exports = {
+  errorGet,
   indexGet,
   newGet,
   newPost,
