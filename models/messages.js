@@ -1,4 +1,33 @@
 const getNewDate = require("../getNewDate");
+const { getMessageArray } = require("../controllers/controller");
+
+const databaseArray = [
+  {
+    text: 'May the Force be with you.',
+    being: 'Luke Skywalker',
+    added: 2024-11-12T15:00:43.429Z
+  },
+  {
+    text: 'Never tell me the odds.',
+    being: 'Han Solo',
+    added: 2024-11-12T15:00:43.429Z
+  },
+  {
+    text: "Help me, Obi-Wan Kenobi. You're my only hope.",
+    being: 'Princess Leia',
+    added: 2024-11-12T15:00:43.429Z
+  },
+  {
+    text: 'I am your father.',
+    being: 'Darth Vader',
+    added: 2024-11-12T15:00:43.429Z
+  },
+  {
+    text: 'Use the Force, Luke.',
+    being: 'Obi-Wan Kenobi',
+    added: 2024-11-12T15:00:43.429Z
+  }
+]
 
 const messages = [
   {
