@@ -1,7 +1,7 @@
 const { Client } = require("pg");
 require("dotenv").config();
 const tableName = "messages";
-const dbName = "mini_message_board";
+// const dbName = "mini_message_board";
 
 const SQL = `
 CREATE TABLE IF NOT EXISTS ${tableName} (
@@ -22,10 +22,11 @@ VALUES
 
 async function main() {
   console.log("seeding...");
-  const roleName = process.env.ROLE_NAME;
-  const rolePassword = process.env.ROLE_PASSWORD;
+  // const roleName = process.env.ROLE_NAME;
+  // const rolePassword = process.env.ROLE_PASSWORD;
   const client = new Client({
-    connectionString: `postgresql://${roleName}:${rolePassword}@localhost:5432/${dbName}`,
+    // old connection string: `postgresql://${roleName}:${rolePassword}@localhost:5432/${dbName}`,
+    connectionString: process.env.DATABASE_URL,
   });
   await client.connect();
   await client.query(SQL);
