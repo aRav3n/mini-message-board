@@ -20,6 +20,23 @@ async function indexGet(req, res) {
   });
 }
 
+async function messageDetailGet(req, res) {
+  const id = req.params.messageId * 1;
+
+  if (isNaN(id)) {
+    res.status(404).render("errorPage", { links: links });
+    return;
+  }
+
+  const message = await db.getMessageDetails(id);
+
+  if (message) {
+    res.render("currentMessage", { links: links, message: message });
+  } else {
+    res.status(404).render("errorPage", { links: links });
+  }
+}
+
 async function newGet(req, res) {
   res.render("newMessage", {
     links: links,
@@ -35,6 +52,7 @@ async function newPost(req, res) {
 module.exports = {
   errorGet,
   indexGet,
+  messageDetailGet,
   newGet,
   newPost,
 };
