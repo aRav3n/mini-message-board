@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Description](#description)
+- [Installation Instructions](#installation-instructions)
 - [Usage and Screenshots](#usage-and-screenshots)
 - [Technologies Used](#technologies-used)
 - [Dependencies and Credits](#dependencies-and-credits)
@@ -11,6 +12,31 @@
 ## Description
 
 This is a mini message board app built using Node.js, Express, and EJS.
+
+## Installation Instructions
+
+1. Clone or fork this repo
+2. cd into the project root directory (where the README.md file is located)
+3. Run the following in your terminal
+    - ``` bash
+      npm init -y
+      npm install dotenv ejs
+      npm install express pg
+      ```
+    - ``` bash   
+      CREATE DATABASE database_name;
+      \c database_name
+      \q
+      code .env
+      ```
+1. <!-- node --> In the .env file 
+   - ``` bash
+     NODE_ENV=development
+     TEST_DATABASE_URL="your_local_test_database_url"
+     DATABASE_URL="your_local_database_url"
+     SECRET_KEY="your_secret_key"
+     ```
+1. Set up the database per [these instructions](https://www.theodinproject.com/lessons/nodejs-using-postgresql)
 
 ## Usage and Screenshots
 
