@@ -2,8 +2,18 @@ const express = require("express");
 const app = express();
 const router = require("./routes/router");
 require("dotenv").config();
-
 const path = require("node:path");
+const cors = require("cors");
+
+const allowList = ["http://localhost:5173"];
+
+const corsOptions = {
+  origin: allowList,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
+app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: true }));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");

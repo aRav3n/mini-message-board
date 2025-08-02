@@ -20,7 +20,7 @@ This is a mini message board app built using Node.js, Express, and EJS.
 3. Run the following in your terminal
     - ``` bash
       npm init -y
-      npm install dotenv ejs
+      npm install dotenv ejs cors
       npm install express pg
       ```
     - ``` bash   
@@ -82,6 +82,7 @@ To view messge details click on a message. The "Home" button brings you back to 
 
 ### Package Dependencies
 
+- [cors](https://www.npmjs.com/package/cors)
 - [dotenv](https://www.npmjs.com/package/dotenv)
 - [pg](https://www.npmjs.com/package/pg)
 
