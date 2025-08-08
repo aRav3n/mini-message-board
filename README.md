@@ -20,8 +20,7 @@ This is a mini message board app built using Node.js, Express, and EJS.
 3. Run the following in your terminal
     - ``` bash
       npm init -y
-      npm install dotenv ejs cors
-      npm install express pg
+      npm install
       ```
     - ``` bash   
       CREATE DATABASE database_name;
